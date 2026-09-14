@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latrice Portfolio | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a class="logo" href="index.html">Latrice Portfolio</a>
+
+            <button id="menuButton" type="button"
+                aria-expanded="false" aria-controls="navLinks">
+                Menu
+            </button>
+
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="eyebrow">Welcome to my portfolio</p>
+                <h1>Learning, creating, and growing in IT.</h1>
+
+                <p>
+                    My name is Latrice. I am a college student studying
+                    information technology and building my skills in web
+                    development, problem-solving, and digital design.
+                </p>
+
+                <a class="button" href="projects.html">
+                    View My Projects
+                </a>
+            </div>
+
+            <div class="hero-card">
+                <span class="card-icon" aria-hidden="true">💻</span>
+                <h2>My Goal</h2>
+                <p>
+                    To build useful, accessible, and user-friendly
+                    technology projects.
+                </p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>About Me</h2>
+            <p>
+                I enjoy learning how websites work and finding ways to make
+                technology easier for people to use. Each assignment gives me
+                a chance to practice new skills and become more confident
+                with coding.
+            </p>
+        </section>
+
+        <section class="content-section highlight-section">
+            <h2>What I Am Learning</h2>
+
+            <div class="skill-grid">
+                <article class="skill-card">
+                    <h3>HTML</h3>
+                    <p>
+                        Creating organized webpages with meaningful structure.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>CSS</h3>
+                    <p>
+                        Designing pages that look good on phones and computers.
+                    </p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>
+                        Adding interactions that make webpages more useful.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section interaction-section">
+            <h2>Want to see a message?</h2>
+
+            <p id="messageText">
+                Click the button to display a welcome message.
+            </p>
+
+            <button class="button" id="messageButton" type="button">
+                Show Message
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Latrice's Portfolio. Created for my web development
+            capstone.
+        </p>
+    </footer>
+
+</body>
+</html>
