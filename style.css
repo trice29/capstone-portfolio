@@ -85,7 +85,7 @@ nav {
 }
 
 .eyebrow {
-    color: #c05a96;
+    color: #8f3f70;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -105,13 +105,13 @@ h1 {
 }
 
 h2 {
-    color: #8d5ba6;
+    color: #704080;
     font-size: 2rem;
     margin-top: 0;
 }
 
 h3 {
-    color: #b04f8b;
+    color: #873568;
 }
 
 .hero-text p:not(.eyebrow),
@@ -227,7 +227,7 @@ h3 {
 
 .project-tools {
     font-size: 0.95rem;
-    color: #76527f;
+    color: #5e3b68;
 }
 
 .next-step {
