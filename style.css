@@ -144,10 +144,10 @@ h3 {
 .button {
     display: inline-block;
     margin-top: 1rem;
-    background: #d477ad;
+    background: #9b3f78;
     color: white;
     text-decoration: none;
-    border: 2px solid #d477ad;
+    border: 2px solid #9b3f78;
     padding: 0.7rem 1.2rem;
     border-radius: 25px;
     font-weight: bold;
@@ -157,8 +157,8 @@ h3 {
 
 .button:hover,
 .button:focus {
-    background: #b95b91;
-    border-color: #b95b91;
+    background: #7d2f60;
+    border-color: #7d2f60;
     transform: translateY(-2px);
 }
 
