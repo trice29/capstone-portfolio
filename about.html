@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latrice Portfolio | About & Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a class="logo" href="index.html">Latrice Portfolio</a>
+
+            <button id="menuButton" type="button"
+                aria-expanded="false" aria-controls="navLinks">
+                Menu
+            </button>
+
+            <ul id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About / Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-heading">
+            <p class="eyebrow">Get to know me</p>
+
+            <h1>About Me</h1>
+
+            <p>
+                A little about my journey, my goals, and what I am learning
+                in information technology.
+            </p>
+        </section>
+
+        <section class="about-grid content-section">
+
+            <article class="about-card">
+                <span class="card-icon" aria-hidden="true">🌸</span>
+
+                <h2>Who I Am</h2>
+
+                <p>
+                    My name is Latrice, and I am a college student studying
+                    information technology. I enjoy learning new skills,
+                    solving problems, and finding ways to make technology
+                    easier to use.
+                </p>
+
+                <p>
+                    I am still growing as a student, but every project gives
+                    me more practice and helps me become more confident.
+                </p>
+            </article>
+
+            <article class="about-card">
+                <span class="card-icon" aria-hidden="true">💻</span>
+
+                <h2>My IT Goals</h2>
+
+                <p>
+                    My goal is to continue building my technical skills and
+                    learn more about IT support, web development, and
+                    problem-solving.
+                </p>
+
+                <p>
+                    I hope to use what I learn to create useful technology
+                    solutions and help people with their technology needs.
+                </p>
+            </article>
+
+        </section>
+
+        <section class="content-section contact-section">
+            <h2>Contact Me</h2>
+
+            <p>
+                If you would like to send me a message, fill out the form
+                below.
+            </p>
+
+            <form id="contactForm" novalidate>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <p class="error-message" id="nameError"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="error-message" id="emailError"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                    <p class="error-message" id="subjectError"></p>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <p class="error-message" id="messageError"></p>
+                </div>
+
+                <button class="button" type="submit">Send Message</button>
+
+                <p id="formSuccess" class="success-message" role="status"></p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Latrice's Portfolio. Created for my web development
+            capstone.
+        </p>
+    </footer>
+
+</body>
+</html>
+```
