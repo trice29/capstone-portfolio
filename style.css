@@ -98,6 +98,10 @@ nav {
     align-items: center;
 }
 
+.hero-text {
+    min-width: 0;
+}
+
 .eyebrow {
     color: #7b3565;
     font-weight: bold;
@@ -381,10 +385,20 @@ button:focus {
         flex-direction: column;
         flex-basis: 100%;
         gap: 0.5rem;
+        width: 100%;
     }
 
     #navLinks.show {
         display: flex;
+    }
+
+    #navLinks li {
+        width: 100%;
+    }
+
+    #navLinks a {
+        display: block;
+        width: 100%;
     }
 
     .hero {
@@ -417,7 +431,10 @@ button:focus {
     }
 }
 
-/* Smaller phone screens */
+/* =========================
+   Smaller Phone Screens
+========================= */
+
 @media (max-width: 400px) {
     nav {
         padding: 0.85rem 1rem;
@@ -443,4 +460,3 @@ button:focus {
         padding: 1.25rem;
     }
 }
-```
