@@ -10,6 +10,7 @@ if (menuButton && navLinks) {
         const isOpen = navLinks.classList.toggle("show");
 
         menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.textContent = isOpen ? "Close" : "Menu";
     });
 }
 
@@ -52,20 +53,17 @@ if (contactForm) {
 
         let isValid = true;
 
-        // Clear old messages
         nameError.textContent = "";
         emailError.textContent = "";
         subjectError.textContent = "";
         messageError.textContent = "";
         formSuccess.textContent = "";
 
-        // Check name
         if (nameInput.value.trim() === "") {
             nameError.textContent = "Please enter your name.";
             isValid = false;
         }
 
-        // Check email
         if (emailInput.value.trim() === "") {
             emailError.textContent = "Please enter your email.";
             isValid = false;
@@ -74,19 +72,16 @@ if (contactForm) {
             isValid = false;
         }
 
-        // Check subject
         if (subjectInput.value.trim() === "") {
             subjectError.textContent = "Please enter a subject.";
             isValid = false;
         }
 
-        // Check message
         if (messageInput.value.trim() === "") {
             messageError.textContent = "Please enter a message.";
             isValid = false;
         }
 
-        // Show success message
         if (isValid) {
             formSuccess.textContent =
                 "Thank you! Your message has been submitted successfully.";
@@ -95,7 +90,6 @@ if (contactForm) {
         }
     });
 
-    // Clear errors as the user types
     nameInput.addEventListener("input", function () {
         nameError.textContent = "";
     });
@@ -112,4 +106,3 @@ if (contactForm) {
         messageError.textContent = "";
     });
 }
-```
