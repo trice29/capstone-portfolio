@@ -1,108 +1,83 @@
-// =========================
-// Mobile Menu Button
-// =========================
+document.addEventListener("DOMContentLoaded", function () {
+    // Mobile menu
+    const menuButton = document.querySelector("#menuButton");
+    const navLinks = document.querySelector("#navLinks");
 
-const menuButton = document.querySelector("#menuButton");
-const navLinks = document.querySelector("#navLinks");
+    if (menuButton && navLinks) {
+        menuButton.addEventListener("click", function () {
+            navLinks.classList.toggle("show");
 
-if (menuButton && navLinks) {
-    menuButton.addEventListener("click", function () {
-        const isOpen = navLinks.classList.toggle("show");
+            const menuIsOpen = navLinks.classList.contains("show");
+            menuButton.setAttribute("aria-expanded", menuIsOpen);
+        });
+    }
 
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.textContent = isOpen ? "Close" : "Menu";
-    });
-}
+    // Show message button
+    const messageButton = document.querySelector("#messageButton");
+    const messageText = document.querySelector("#messageText");
 
-// =========================
-// Show Message Button
-// =========================
+    if (messageButton && messageText) {
+        messageButton.addEventListener("click", function () {
+            messageText.textContent =
+                "Thanks for visiting my portfolio! I am excited to keep learning and creating.";
 
-const messageButton = document.querySelector("#messageButton");
-const messageText = document.querySelector("#messageText");
+            messageButton.textContent = "Message Shown";
+        });
+    }
 
-if (messageButton && messageText) {
-    messageButton.addEventListener("click", function () {
-        messageText.textContent =
-            "Thanks for visiting my portfolio! I am excited to keep learning and creating.";
+    // Contact form validation
+    const contactForm = document.querySelector("#contactForm");
 
-        messageButton.textContent = "Message Shown";
-    });
-}
+    if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-// =========================
-// Contact Form Validation
-// =========================
+            let valid = true;
 
-const contactForm = document.querySelector("#contactForm");
+            const name = document.querySelector("#name");
+            const email = document.querySelector("#email");
+            const subject = document.querySelector("#subject");
+            const message = document.querySelector("#message");
 
-if (contactForm) {
-    const nameInput = document.querySelector("#name");
-    const emailInput = document.querySelector("#email");
-    const subjectInput = document.querySelector("#subject");
-    const messageInput = document.querySelector("#message");
+            const nameError = document.querySelector("#nameError");
+            const emailError = document.querySelector("#emailError");
+            const subjectError = document.querySelector("#subjectError");
+            const messageError = document.querySelector("#messageError");
+            const formSuccess = document.querySelector("#formSuccess");
 
-    const nameError = document.querySelector("#nameError");
-    const emailError = document.querySelector("#emailError");
-    const subjectError = document.querySelector("#subjectError");
-    const messageError = document.querySelector("#messageError");
-    const formSuccess = document.querySelector("#formSuccess");
+            nameError.textContent = "";
+            emailError.textContent = "";
+            subjectError.textContent = "";
+            messageError.textContent = "";
+            formSuccess.textContent = "";
 
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+            if (name.value.trim() === "") {
+                nameError.textContent = "Please enter your name.";
+                valid = false;
+            }
 
-        let isValid = true;
+            if (email.value.trim() === "") {
+                emailError.textContent = "Please enter your email.";
+                valid = false;
+            } else if (!email.validity.valid) {
+                emailError.textContent = "Please enter a valid email.";
+                valid = false;
+            }
 
-        nameError.textContent = "";
-        emailError.textContent = "";
-        subjectError.textContent = "";
-        messageError.textContent = "";
-        formSuccess.textContent = "";
+            if (subject.value.trim() === "") {
+                subjectError.textContent = "Please enter a subject.";
+                valid = false;
+            }
 
-        if (nameInput.value.trim() === "") {
-            nameError.textContent = "Please enter your name.";
-            isValid = false;
-        }
+            if (message.value.trim() === "") {
+                messageError.textContent = "Please enter a message.";
+                valid = false;
+            }
 
-        if (emailInput.value.trim() === "") {
-            emailError.textContent = "Please enter your email.";
-            isValid = false;
-        } else if (!emailInput.validity.valid) {
-            emailError.textContent = "Please enter a valid email address.";
-            isValid = false;
-        }
-
-        if (subjectInput.value.trim() === "") {
-            subjectError.textContent = "Please enter a subject.";
-            isValid = false;
-        }
-
-        if (messageInput.value.trim() === "") {
-            messageError.textContent = "Please enter a message.";
-            isValid = false;
-        }
-
-        if (isValid) {
-            formSuccess.textContent =
-                "Thank you! Your message has been submitted successfully.";
-
-            contactForm.reset();
-        }
-    });
-
-    nameInput.addEventListener("input", function () {
-        nameError.textContent = "";
-    });
-
-    emailInput.addEventListener("input", function () {
-        emailError.textContent = "";
-    });
-
-    subjectInput.addEventListener("input", function () {
-        subjectError.textContent = "";
-    });
-
-    messageInput.addEventListener("input", function () {
-        messageError.textContent = "";
-    });
-}
+            if (valid) {
+                formSuccess.textContent = "Your message was submitted successfully!";
+                contactForm.reset();
+            }
+        });
+    }
+});
